@@ -4,7 +4,7 @@
 
 **YOLOStarter** 是一个专为代码小白和对视觉模型感兴趣的新手设计的 **YOLO目标检测可视化平台**。无需编写复杂代码，通过友好的图形界面即可完成从数据集准备、模型训练到实时预测的完整机器学习工作流。
 
----
+***
 
 ## 为什么创建这个项目？
 
@@ -17,40 +17,45 @@
 
 **YOLOStarter** 的诞生就是为了解决这些痛点，让每个人都能轻松体验目标检测的魅力。
 
----
+***
 
 ## 核心功能
 
 ### 1. 实时预测
+
 - 支持摄像头实时检测
 - 支持图片上传批量检测
 - 检测结果可视化展示
 - 支持导出Excel检测报告
 
 ### 2. 模型训练
+
 - 可视化配置训练参数
 - 支持YOLOv8n/s/m/l多种模型规格
 - 实时查看训练日志和进度
 - 自动保存训练结果
 
 ### 3. 模型管理
+
 - 一键查看所有训练好的模型
 - 模型性能测试与评估
 - 快速切换当前使用的模型
 - 模型文件管理（删除、导出）
 
 ### 4. 数据集管理
+
 - 可视化创建和管理数据集
 - 支持图片和标签文件上传
 - 自动生成YOLO格式配置文件
 - 数据集格式验证
 
 ### 5. 使用指南
+
 - 内置详细的使用教程
 - 常见问题解答
 - 参数调优建议
 
----
+***
 
 ## 技术架构
 
@@ -78,6 +83,7 @@ YOLOStarter/
 ### 技术栈
 
 **前端**
+
 - Vue 3 + TypeScript
 - Element Plus UI组件库
 - ECharts 数据可视化
@@ -85,16 +91,18 @@ YOLOStarter/
 - Vite 构建工具
 
 **后端**
+
 - Python Flask API服务
 - Ultralytics YOLO
 - OpenCV 图像处理
 - PyTorch 深度学习框架
 
----
+***
 
 ## 快速开始
 
 ### 环境要求
+
 - Python 3.8+
 - Node.js 16+
 - CUDA（可选，用于GPU加速）
@@ -108,19 +116,21 @@ PyTorch 需要根据您的系统配置选择合适的版本安装。
 **1. 检查您的CUDA版本（如果有NVIDIA显卡）**
 
 打开命令行执行：
+
 ```bash
 nvidia-smi
 ```
+
 在输出中找到 `CUDA Version` 一行，记下版本号。
 
 **2. 选择对应的安装命令**
 
-| 您的配置 | 安装命令 |
-|---------|---------|
-| **无显卡 / 仅CPU** | `pip install torch torchvision torchaudio` |
-| **CUDA 11.8** | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118` |
-| **CUDA 12.1** | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` |
-| **CUDA 12.4** | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124` |
+| 您的配置           | 安装命令                                                                                          |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| **无显卡 / 仅CPU** | `pip install torch torchvision torchaudio`                                                    |
+| **CUDA 11.8**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118` |
+| **CUDA 12.1**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` |
+| **CUDA 12.4**  | `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124` |
 
 **3. 验证安装**
 
@@ -132,9 +142,9 @@ python -c "import torch; print(f'PyTorch版本: {torch.__version__}'); print(f'C
 
 **4. 官方安装指南**
 
-更多版本请访问 PyTorch 官网：https://pytorch.org/get-started/locally/
+更多版本请访问 PyTorch 官网：<https://pytorch.org/get-started/locally/>
 
----
+***
 
 #### 第二步：安装其他Python依赖
 
@@ -143,11 +153,12 @@ pip install -r requirements.txt
 ```
 
 或手动安装：
+
 ```bash
 pip install ultralytics flask flask-cors opencv-python numpy matplotlib pyyaml
 ```
 
----
+***
 
 #### 第三步：安装前端依赖
 
@@ -156,7 +167,7 @@ cd frontend
 npm install
 ```
 
----
+***
 
 #### 第四步：启动服务
 
@@ -164,12 +175,12 @@ npm install
 
 双击运行 `start-frontend.bat`，将自动启动所有服务：
 
-| 服务 | 端口 | 说明 |
-|------|------|------|
-| Unified API Server | 5000 | 主API服务 |
-| YOLO Test API | 5003 | 模型测试服务 |
-| YOLO Train API | 5004 | 模型训练服务 |
-| Dataset API | 5006 | 数据集管理服务 |
+| 服务                  | 端口   | 说明      |
+| ------------------- | ---- | ------- |
+| Unified API Server  | 5000 | 主API服务  |
+| YOLO Test API       | 5003 | 模型测试服务  |
+| YOLO Train API      | 5004 | 模型训练服务  |
+| Dataset API         | 5006 | 数据集管理服务 |
 | Frontend Dev Server | 5173 | 前端开发服务器 |
 
 **方式二：手动启动**
@@ -191,13 +202,13 @@ cd frontend
 npm run dev
 ```
 
----
+***
 
 #### 第五步：访问应用
 
 打开浏览器访问 `http://localhost:5173`
 
----
+***
 
 ## 使用流程
 
@@ -208,7 +219,7 @@ npm run dev
   标注数据     设置轮数      监控进度   切换模型   导出报告
 ```
 
----
+***
 
 ## 适合人群
 
@@ -217,7 +228,7 @@ npm run dev
 - 需要快速验证想法的开发者
 - 想要学习YOLO模型的新手
 
----
+***
 
 ## 项目特色
 
@@ -228,7 +239,7 @@ npm run dev
 - **中文界面**：全中文界面，降低学习门槛
 - **详细教程**：内置使用指南，手把手教学
 
----
+***
 
 ## 许可证
 
