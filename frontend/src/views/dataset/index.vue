@@ -377,6 +377,22 @@
           </div>
         </template>
         
+        <el-alert
+          type="warning"
+          :closable="false"
+          style="margin-bottom: 16px;"
+        >
+          <template #title>
+            <strong>YAML配置文件说明</strong>
+          </template>
+          <div style="margin-top: 8px; line-height: 1.8;">
+            <p style="margin: 4px 0;"><strong>path</strong>：必须使用绝对路径（如 D:/yuyan/Visual/datasets/your_dataset）</p>
+            <p style="margin: 4px 0;"><strong>train/val/test</strong>：相对于path的图片目录路径</p>
+            <p style="margin: 4px 0;"><strong>names</strong>：类别名称列表，支持中文</p>
+            <p style="margin: 4px 0; color: #f56c6c;">⚠️ 路径配置错误会导致训练失败！</p>
+          </div>
+        </el-alert>
+        
         <div class="yaml-info" v-if="yamlData">
           <el-descriptions :column="1" border>
             <el-descriptions-item label="类别数量">
